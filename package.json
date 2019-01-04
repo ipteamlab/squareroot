@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "application for solvig quadratic equation",
   "main": "main.js",
+  "repository": "https://github.com/ipteamlab/squareroot",
   "scripts": {
     "start": "electron .",
     "package-mac": "electron-packager . --overwrite --asar --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
