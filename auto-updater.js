@@ -2,15 +2,16 @@ const { app, autoUpdater, dialog, BrowserWindow } = require('electron');
 
 const isDevelopment = app.getPath('exe').indexOf('electron') !== -1;
 
-const baseUrl = 'https://firesale-releases.glitch.me';
+const baseUrl = 'https://github.com/ipteamlab/squareroot';
 
 const platform = process.platform;
+console.log(platform)
 const currentVersion = app.getVersion();
-
-const releaseFeed = `${baseUrl}/releases/${platform}?currentVersion=${currentVersion}`;
-
+console.log(currentVersion)
+const releaseFeed = `${baseUrl}/releases/tag/${currentVersion}`;
+console.log(releaseFeed)
 if (isDevelopment) {
-  console.info('[AutoUpdater]', 'In Developement Mode. Skipping…');
+  console.info('[AutoUpdater]', 'In Developement Mode. Skipping');
 } else {
   console.info('[AutoUpdater]', `Setting release feed to ${releaseFeed}.`);
   autoUpdater.setFeedURL(releaseFeed);
