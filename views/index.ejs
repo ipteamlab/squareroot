@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include partials/template/head.ejs %>
+</head>
+
+<body>
+  <h1>Solving the Quadratic Equation</h1>
+  <div>
+    <p>
+      In algebra, a quadratic equation is any equation having the form <h3>\(ax^2 + bx + c = 0\)</h3> and they are
+      where \(x\) represents an unknown, and \(a\), \(b\), and \(c\) represent known numbers.
+    </p>
+  </div>
+  <br>
+  <div class="ui form">
+    <form action="/parametres" id="paramEqua" method="POST" >
+      <div class="fields">
+        <div class="field">
+          <label>a</label>
+          <input id="a" type="text" name="a">
+        </div>
+        <div class="field">
+          <label>b</label>
+          <input id="b" type="text" name="b">
+        </div>
+        <div class="field">
+          <label>c</label>
+          <input id="c" type="text" name="c">
+        </div>
+      </div>
+      <br>
+      <input type="submit" value="Analytical Solution" class="ui button" />
+      <input type="button" id="button" value="Graphical Solution" class="ui button" />
+    </form>
+    <br>
+
+  </div>
+
+  <br>
+
+  <div id="equa"></div>
+
+  <form action="/pdfreport" id="pdfForm" method="POST">
+    <div id="reportsolve"></div>
+    <div id="btnpdf"></div>
+  </form>
+
+
+  <div id="some_modal" class="ui modal"></div>
+
+  <% include partials/template/jsdefaults.ejs %>
+</body>
+
+</html>

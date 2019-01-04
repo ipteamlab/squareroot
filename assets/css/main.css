@@ -1,0 +1,23 @@
+#materials-db-container {
+	min-height: 150px;
+
+	/* Turn off semantic UI segment box */
+	border: 0px !important;
+	box-shadow: 0px 0px !important;
+	padding: 0 !important;
+
+}
+
+.ui.input label {
+	margin-top: 20px;
+	display:block;
+	width: 200px;
+}
+
+#materials-db-container div.ui.dimmer { /* make the loading div a full white background so you can't see behind it */
+	background-color: rgba(255,255,255,1) !important;
+}
+
+#materials-db-msg {
+	margin-top: 0px !important;
+}
